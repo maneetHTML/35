@@ -6,16 +6,16 @@ while not done:
     for event in pygame.event.get():
         if event.type == pygame.QUIT:
             done = True
-        # if event.type == pygame.KEYDOWN:
-        #     print("A key was pressed")
-        if event.key == pygame.K_UP:
-            print("Up arrow key pressed")
-        elif event.key == pygame.K_DOWN:
-            print("down arrow key pressed")
-        elif event.key == pygame.K_RIGHT:
-            print("Right arrow key pressed")
-        elif event.key == pygame.K_LEFT:
-            print("Left arrow key pressed")
-        # else:
-        #     print("Other keys were pressed")
+        elif event.type == pygame.KEYDOWN:
+            if event.key == pygame.K_UP:
+                print("Up arrow key pressed")
+            elif event.key == pygame.K_DOWN:
+                print("down arrow key pressed")
+            elif event.key == pygame.K_RIGHT:
+                print("Right arrow key pressed")
+            elif event.key == pygame.K_LEFT:
+                print("Left arrow key pressed")
+            else:
+                print("Other keys were pressed")
     pygame.display.flip()
+pygame.quit()
